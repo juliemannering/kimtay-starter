@@ -1,8 +1,0 @@
-# Never commit secrets
-.env
-*.env
-# OS / editor clutter
-.DS_Store
-Thumbs.db
-.vscode/settings.json
-__pycache__/

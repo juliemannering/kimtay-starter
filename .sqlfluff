@@ -2,7 +2,6 @@
 dialect = postgres
 templater = raw
 max_line_length = 120
-# Keep the linter helpful, not picky, for an intro course.
 exclude_rules = AM04, ST06, LT05, RF04, CV06
 
 [sqlfluff:rules:capitalisation.keywords]
