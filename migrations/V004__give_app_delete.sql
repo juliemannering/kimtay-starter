@@ -1,0 +1,1 @@
+GRANT DELETE ON customer TO kimtay_app;
