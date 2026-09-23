@@ -1,6 +1,6 @@
 # KimTay Pet Supplies Database - DevSecOps Track
 
-![CI](https://github.com/YOUR-USERNAME/YOUR-REPO/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/juliemannering/kimtay-starter/actions/workflows/ci.yml/badge.svg)
 
 A PostgreSQL database for a fictional pet supply company, built and tested like production code:
 version-controlled migrations, automated tests, least-privilege roles, SQL linting, and secret scanning
