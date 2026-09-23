@@ -1,0 +1,29 @@
+# Two containers: "app" is where you type commands; "db" runs PostgreSQL 16.
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/python:3.12
+    volumes:
+      - ../..:/workspaces:cached
+    command: sleep infinity
+    environment:
+      PGHOST: db
+      PGPORT: "5432"
+      PGUSER: postgres
+      PGDATABASE: kimtay
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: kimtay
+      POSTGRES_USER: postgres
+      # Class sandbox only: no password inside this private container network.
+      # Real systems use a secret store. See docs/SECURITY_NOTES.md.
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
